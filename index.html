@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sakuryn</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="header">Sakuryn Music Player</div>
+
+		<div class="sidebar">
+			<button class="button">Home</button>
+			<button class="button">Library</button>
+			<button class="button">Playlists</button>
+			<button class="button">Settings</button>
+		</div>
+
+		<div class="main">
+			<h1>Welcome to Sakuryn 🎵</h1>
+			<p>Select music from your library or create your first playlist.</p>
+			<button class="button" onclick="sayHi()">Test Button</button>
+			<button class="button" onclick="chooseFolder()">
+				Choose Music Folder
+			</button>
+		</div>
+
+		<div class="player-bar">
+			<button class="player-btn" onclick="prevSong()">⏮️</button>
+
+			<button class="player-btn" onclick="togglePlay()">⏯️</button>
+
+			<button class="player-btn" onclick="nextSong()">⏭️</button>
+
+			<span id="current-time">0:00</span>
+
+			<input type="range" id="seek-bar" value="0" min="0" max="100" />
+
+			<span id="total-time">0:00</span>
+
+			<span id="now-playing" style="margin-left: 30px">Nothing playing</span>
+
+			<input
+				type="range"
+				id="volume-bar"
+				min="0"
+				max="100"
+				value="100"
+				style="width: 120px"
+			/>
+		</div>
+
+		<audio id="audio-player"></audio>
+
+		<script src="script.js"></script>
+
+		<button class="button" onclick="clearLibrary()">Clear Library</button>
+	</body>
+</html>
